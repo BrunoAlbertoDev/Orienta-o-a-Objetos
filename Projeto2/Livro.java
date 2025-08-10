@@ -7,6 +7,7 @@ public class Livro {
     public double price;
     public String isbn;
     public int quantity;
+    public  Autor autor;
 
 
     public void ADDLivro(int quantity){
@@ -21,7 +22,7 @@ public class Livro {
 
     public void RemoveFromStock(int quantity){
 
-        this.quantity-=quantity;
+        this.quantity -= quantity;
 
     }
 

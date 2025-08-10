@@ -9,9 +9,18 @@ public class CadastrarLivrosAplication {
 
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
+
+
+        Autor autor = new Autor();
         Livro livro = new Livro();
 
 
+        System.out.println("\n====== Autor do 1º Livro ======");
+
+        System.out.print("Nome: ");
+        autor.name = sc.nextLine();
+        System.out.print("E-mail: ");
+        autor.email = sc.nextLine();
 
         System.out.print("Name: ");
         livro.name = sc.nextLine();
@@ -24,9 +33,13 @@ public class CadastrarLivrosAplication {
         livro.isbn = sc.nextLine();
         System.out.print("Quantity: ");
         livro.quantity = sc.nextInt();
+        livro.autor = autor;
+
+
 
         System.out.println("====== Dados do 1º Livro ======");
         System.out.println(livro);
+       System.out.println(livro.autor);
 
         System.out.print("\nRemove book from stock? ");
         int removeStock = sc.nextInt();
