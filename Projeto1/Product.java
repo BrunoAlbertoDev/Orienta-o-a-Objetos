@@ -18,6 +18,12 @@ public class Product {
 
         this.quantity-=quantity;
     }
+    
+    public void Meucarrinho(String nome, int quantidade){
+
+         name = name;
+         quantity = quantity;
+    }
 
     public String toString(){
 
@@ -28,5 +34,18 @@ public class Product {
                 +"Quantity: " + quantity+" units"
                 +", "
                 +"Total: "+String.format("R$ %.2f",TotalValueInStock());
+    }
+
+    public String toString2(){
+
+        return "====== Meu Carrinho ======"
+                +"\n"
+                +"produto: "+name
+                +"\n"
+                +"Quantidade: "+quantity +" unidades"
+                +"\n"
+                +"Total a Pagar: "+String.format("R$ %.2f",TotalValueInStock());
+
+
     }
 }

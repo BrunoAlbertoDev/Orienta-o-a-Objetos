@@ -34,6 +34,8 @@ public class Aplication {
 
         System.out.print("\nUpdated Final: "+product);
 
+        System.out.println("\n\n"+product.toString2());
+
 
     }
 }
