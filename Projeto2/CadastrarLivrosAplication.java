@@ -11,35 +11,30 @@ public class CadastrarLivrosAplication {
         Scanner sc = new Scanner(System.in);
 
 
-        Autor autor = new Autor();
-        Livro livro = new Livro();
-
-
-        System.out.println("\n====== Autor do 1º Livro ======");
-
-        System.out.print("Nome: ");
-        autor.name = sc.nextLine();
-        System.out.print("E-mail: ");
-        autor.email = sc.nextLine();
-
         System.out.print("Name: ");
-        livro.name = sc.nextLine();
+        String name = sc.nextLine();
         System.out.print("Descrição: ");
-        livro.decicao = sc.nextLine();
+        String decicao = sc.nextLine();
         System.out.print("Price: ");
-        livro.price = sc.nextDouble();
+        double price = sc.nextDouble();
         sc.nextLine();
         System.out.print("isbn: ");
-        livro.isbn = sc.nextLine();
+        String isbn = sc.nextLine();
         System.out.print("Quantity: ");
-        livro.quantity = sc.nextInt();
-        livro.autor = autor;
+        int quantity = sc.nextInt();
+        System.out.print("Autor: ");
+        sc.nextLine();
+        String nameAutor = sc.nextLine();
+        System.out.print("Email: ");
+        String emailAutor = sc.nextLine();
+        Livro livro = new Livro(name, decicao, price, isbn, quantity, nameAutor, emailAutor );
+        Autor autor = new Autor(nameAutor,emailAutor);
 
 
 
         System.out.println("====== Dados do 1º Livro ======");
-        System.out.println(livro);
-       System.out.println(livro.autor);
+        System.out.println(livro.toString());
+        System.out.println(autor.toString());
 
         System.out.print("\nRemove book from stock? ");
         int removeStock = sc.nextInt();
@@ -47,5 +42,6 @@ public class CadastrarLivrosAplication {
 
         System.out.println("====== Update do 1º Book ======");
         System.out.println(livro);
+        System.out.println(autor);
     }
 }
